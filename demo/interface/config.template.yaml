@@ -1,0 +1,10 @@
+# Escolha entre: gemini, openai, github, groq, mistral, cerebras
+provedor_ativo: "gemini"
+
+chaves_api:
+  gemini: "<minha chave google ai studio>"
+  openai: "<minha chave openai>"
+  github: "<minha chave github market>"
+  groq: "<minha chave groq>"
+  mistral: "<minha chave mistral>"
+  cerebras: "<minha chave cerebras>"
