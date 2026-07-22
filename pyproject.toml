@@ -1,0 +1,47 @@
+[project]
+name = "bittty"
+description = "a pure python tty"
+version = "0.0.10"
+authors = [
+    { name = "Gareth Davidson", email = "gaz@bitplane.net" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pywinpty==2.0.15; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "pytest",
+    "coverage",
+    "pytest-cov",
+    "pytest-asyncio",
+    "plotext",
+    "build",
+    "twine",
+    "ruff",
+    "pydoc-markdown",
+    "snakeviz"
+]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "unix: marks tests as Unix/Linux/macOS only",
+    "windows: marks tests as Windows only",
+    "integration: marks tests as end-to-end integration tests (require demo app)",
+]
