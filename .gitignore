@@ -12,3 +12,4 @@ uv.lock
 *.prof
 .crush
 logs
+demo/interface/config.yaml
